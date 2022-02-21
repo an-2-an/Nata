@@ -36,6 +36,11 @@ class MyStack:
             elif item == '}':
                 if line.endswith('{'):
                     line = line[:-1]
+            if item == '[':
+                line += '['
+            elif item == ']':
+                if line.endswith(']'):
+                    line = line[:-1]
         return not line
 
     def pop(self):
